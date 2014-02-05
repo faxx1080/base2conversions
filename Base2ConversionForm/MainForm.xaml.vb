@@ -1,4 +1,6 @@
-﻿Imports Base2Conversion
+﻿' Author: Frank Migliorino
+
+Imports Base2Conversion
 Class MainForm
 
     Dim cbxStrings As String() = New String() _

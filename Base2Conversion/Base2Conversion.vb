@@ -1,4 +1,6 @@
-﻿Public Class Base2Conversion
+﻿' Author: Frank Migliorino
+
+Public Class Base2Conversion
 
     'Frank Migliorino - 1/24/2010
     'Values obtained from http://www.onlineconversion.com/computer_base2.htm
