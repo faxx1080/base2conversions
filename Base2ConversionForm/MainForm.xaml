@@ -1,0 +1,55 @@
+﻿<Window x:Class="MainForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Base 2 Conversion" Height="321" Width="521" Name="MainForm" Icon="AppIcon.ico">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFE2E2E2" Offset="0" />
+            <GradientStop Color="#FFF0F0F0" Offset="0.467" />
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <GroupBox Header="Input" Margin="12,12,12,0" Name="gbxInput" Height="82" VerticalAlignment="Top">
+            <Grid>
+                <Label Margin="16,18,0,0" Name="Label1" HorizontalAlignment="Left" Width="97" ClipToBounds="False" Height="29.04" VerticalAlignment="Top">Input Number: </Label>
+                <TextBox Margin="131,20,162,0" Name="txtIn" Height="23" VerticalAlignment="Top" TabIndex="0" />
+                <ComboBox HorizontalAlignment="Right" Margin="0,20,6,0" Name="cbxInputType" Width="138" Height="23" VerticalAlignment="Top" TabIndex="1" SelectedIndex="2" Text="Kilobytes (KB)">
+                    <ComboBoxItem>Bits</ComboBoxItem>
+                    <ComboBoxItem>Bytes</ComboBoxItem>
+					<ComboBoxItem>Kilobytes (KB)</ComboBoxItem>
+                    <ComboBoxItem>Megabytes (MB)</ComboBoxItem>
+                    <ComboBoxItem>Gigabytes (GB)</ComboBoxItem>
+                    <ComboBoxItem>Terabytes</ComboBoxItem>
+                    <ComboBoxItem>Petabytes</ComboBoxItem>
+                </ComboBox>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Output" Margin="12,100,12,0" Name="gbxOutput" Height="82" VerticalAlignment="Top">
+            <Grid>
+                <Label ClipToBounds="False" HorizontalAlignment="Left" Margin="16,18,0,12" Name="Label2" Width="97">Output Number:</Label>
+                <TextBox  Height="23.04" Margin="131,20,162,0" Name="txtOut" VerticalAlignment="Top" IsReadOnly="True" TabIndex="4" />
+                <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,20,6,0" Name="cbxOutputType"  VerticalAlignment="Top" Width="138" TabIndex="2" Text="Megabytes (MB)" SelectedIndex="3">
+                    <ComboBoxItem>Bits</ComboBoxItem>
+                    <ComboBoxItem>Bytes</ComboBoxItem>
+                    <ComboBoxItem>Kilobytes (KB)</ComboBoxItem>
+                    <ComboBoxItem>Megabytes (MB)</ComboBoxItem>
+                    <ComboBoxItem>Gigabytes (GB)</ComboBoxItem>
+                    <ComboBoxItem>Terabytes</ComboBoxItem>
+                    <ComboBoxItem>Petabytes</ComboBoxItem>
+                </ComboBox>
+            </Grid>
+        </GroupBox>
+        <Button Height="23" Margin="0,206,18,0" Name="btnConvert" VerticalAlignment="Top" TabIndex="3" HorizontalAlignment="Right" Width="109">Convert</Button>
+        <GroupBox Header="Data Type" Height="85" Margin="12,188,137,0" Name="gbxNumType" VerticalAlignment="Top">
+            <Grid>
+                <RadioButton Content="Long" Height="16" HorizontalAlignment="Left" Margin="16,8,0,0" Name="rdbLong" VerticalAlignment="Top" ToolTip="64-Bit signed Integer (19 Places, no decimals)" Width="49" />
+                <RadioButton Content="Decimal" Height="16" HorizontalAlignment="Left" Margin="84,8,0,0" Name="rdbDecimal" VerticalAlignment="Top" ToolTip="128-bit signed integer scaled to a power of 10. (28 places, decimals)" Width="64" IsChecked="True" />
+                <RadioButton Content="Double" Height="16" HorizontalAlignment="Left" Margin="166,8,0,0" Name="rdbDouble" VerticalAlignment="Top" ToolTip="64-bit signed floating-point number with ~18 signifigant figures" Width="64" />
+                <Slider Height="24" Margin="16,32,105,0" Name="sldDecimalPlaces" VerticalAlignment="Top" IsDirectionReversed="False" IsSnapToTickEnabled="True" TickPlacement="BottomRight" Maximum="11"/>
+                <Label Content="Decimal Places:" Height="27" HorizontalAlignment="Right" Margin="0,3,6,0" Name="Label3" VerticalAlignment="Top" Width="93" />
+                <Label Content="Max" Height="27" HorizontalAlignment="Right" Margin="0,29,26,0" Name="lblDecimalPlacesOut" VerticalAlignment="Top" Width="63" />
+            </Grid>
+        </GroupBox>
+        <Button Content="Swap" Height="23" HorizontalAlignment="Right" Margin="0,238,18,0" Name="btnSwap" TabIndex="3" VerticalAlignment="Top" Width="109" />
+    </Grid>
+</Window>
